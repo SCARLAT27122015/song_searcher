@@ -1,9 +1,13 @@
 import React from 'react'
 
+
 const FormSearch = () => {
     return (
         <div>
-            <h2>Form search</h2>
+            <form>
+                <input type="text"/>
+                <input type="text"/>
+            </form>
         </div>
     )
 }
