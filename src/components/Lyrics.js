@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Lyrics = () => {
+const Lyrics = ({lyrics}) => {
     return (
         <div>
             <h2>Lyrics</h2>
+            {lyrics}
         </div>
     )
 }

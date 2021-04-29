@@ -2,12 +2,12 @@ import React from 'react'
 import Artist from './Artist'
 import Lyrics from './Lyrics'
 
-const Details = () => {
+const Details = ({bio, lyrics}) => {
     return (
         <div>
             <h2>Here's your info</h2>
-            <Artist/>
-            <Lyrics/>
+            {bio && <Artist bio={bio}/>}
+            {lyrics && <Lyrics lyrics={lyrics}/>}
         </div>
     )
 }

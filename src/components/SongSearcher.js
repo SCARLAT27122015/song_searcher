@@ -16,7 +16,7 @@ const SongSearcher = () => {
 
     useEffect(() => {
         if (!search) return;
-
+        
 
         const getData = async (search) =>{
             const options = {
@@ -28,6 +28,7 @@ const SongSearcher = () => {
             urlLyrics = `https://api.lyrics.ovh/v1/${artist}/${song}`;
             
             try {
+                setLoad(true);
                 const [arrArtist, arrLyrics] = await Promise.all([fetch(urlArtist, options),fetch(urlLyrics, options)]);
 
                 if (!arrArtist.ok || !arrLyrics.ok) throw new Error('There was an error on the requests');
@@ -35,10 +36,13 @@ const SongSearcher = () => {
                 const jsonArtist = await arrArtist.json();
                 const jsonLyrics = await arrLyrics.json();
                 
-                console.log(jsonLyrics);
-                console.log(jsonArtist);
+                setLyrics(jsonLyrics.lyrics);
+                setBio(jsonArtist.artists[0]);
+                
             } catch (error) {
                 console.error(error);
+            }finally {
+                setLoad(false);
             }
         };
 
@@ -48,9 +52,9 @@ const SongSearcher = () => {
     return (
         <div>
             <h2>Song searcher</h2>
-            {load && <Load/>}
             <FormSearch handleSearch={handleSearch}/>
-            <Details/>
+            {load && <Load/>}
+            { search && <Details bio={bio} lyrics={lyrics}/>}
         </div>
     )
 }
