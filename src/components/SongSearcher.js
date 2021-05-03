@@ -15,7 +15,7 @@ const SongSearcher = () => {
     };
 
     useEffect(() => {
-        if (!search) return;
+        if (search===null) return;
         
 
         const getData = async (search) =>{
