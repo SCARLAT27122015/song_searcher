@@ -50,12 +50,15 @@ const SongSearcher = () => {
     }, [search]);
 
     return (
-        <div>
-            <h2>Song searcher</h2>
+        <>
+        <div className="songsearcher-wrapper">
+            <h1>Song searcher</h1>
             <FormSearch handleSearch={handleSearch}/>
             {load && <Load/>}
             { search && <Details bio={bio} lyrics={lyrics}/>}
         </div>
+        <div className="clear"></div>
+        </>
     )
 }
 

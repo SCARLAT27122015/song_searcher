@@ -18,7 +18,6 @@ export const useValidations = (form, formvalidator) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        
         setErrors(formvalidator(formHook));
         setResp(formHook);
     };

@@ -3,3 +3,83 @@
   padding:0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.songsearcher-wrapper{
+  width: 80%;
+  margin: auto; 
+}
+
+.songsearcher-wrapper h1{
+  padding: 10px;
+}
+
+.formsearch-wrapper{
+  margin-top: 20px;
+  background-color: lightgray;
+  padding: 10px 0 10px 10px;
+  padding: 10px;  
+}
+
+.formsearch-wrapper input {
+  display: block;
+  margin: 10px 0;
+}
+
+.formsearch-wrapper input[type=text] {
+  height: 20px;
+  border-radius: 15px;
+  border: 1px solid lightgray;
+  padding: 0 10px;
+  width: 50%;
+}
+
+.formsearch-wrapper input[type=submit] {
+  height: 20px;
+  border-radius: 15px;
+  padding: 0 10px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+
+.formsearch-wrapper p{
+  background-color: lightyellow;
+  padding:5px;
+  color: red;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.details-wrapper{
+  padding:10px;
+}
+
+.artist-wrapper{
+  float: left;
+  width: 45%;
+  
+}
+
+.artist-wrapper h2{
+  margin: 10px 0;
+}
+
+.artist-wrapper img{
+  width: 250px;
+  float: left;
+  margin: 5px 10px 0 0;
+}
+
+.artist-wrapper p {
+  text-align: justify;
+}
+
+.lyrics-wrapper{
+  float: right;
+  width: 45%;
+  
+}
+
+.clear{
+  clear: both;
+}

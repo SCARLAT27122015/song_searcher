@@ -2,7 +2,7 @@ import React from 'react'
 
 const Lyrics = ({lyrics}) => {
     return (
-        <div style={{whiteSpace:'pre-wrap'}}>
+        <div className="lyrics-wrapper" style={{whiteSpace:'pre-wrap'}}>
             {lyrics}
         </div>
     )
